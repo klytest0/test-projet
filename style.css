@@ -1,0 +1,364 @@
+@font-face {
+  font-family: "PT Serif";
+  src: url(./util/PTSerif-Regular.ttf);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family: "PT Serif", "New Times Roman", monospace;
+  background-image: url(omnitema-pic.jpg);
+  background-attachment: fixed;
+  /*background: rgba(255, 255, 255, 0.15) url(./omnitema-pic.jpg) no-repeat top left;
+	height: 100%;*/
+}
+
+/*body::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(./omnitema-pic.jpg);
+	background-position: center;
+	opacity: 0.5;
+	z-index: -1;
+	background-attachment: fixed;*/
+
+header {
+  background-image: linear-gradient(
+    360deg,
+    rgba(200, 200, 100, 0.9) 40%,
+    transparent
+  );
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  transition: position 5s;
+  animation: top 3s ease forwards;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+#top {
+  font-weight: bold;
+  padding-bottom: 100px;
+  overflow: hidden;
+  padding: 20px;
+  clear: both;
+  transition:
+    border 0.3s,
+    padding 0.2s;
+  background-color: #c0c0c0;
+  border-top: 2px solid rgba(12 131 59);
+  border-bottom: 2px solid rgba(12 131 59);
+  animation: center 3s ease-out forwards;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  animation: center 5s ease-out forwards;
+}
+
+nav a {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding: 20px;
+  color: (57, 42, 73);
+}
+
+nav li {
+  text-decoration: underline;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+
+main > section:nth-child(odd) {
+  padding-bottom: 100px;
+  overflow: hidden;
+  padding-top: 20px;
+  clear: both;
+  transition:
+    border 0.3s,
+    padding 0.2s;
+  background-color: rgba(73 150 114);
+  border-top: 2px solid rgba(12 131 59);
+  border-bottom: 2px solid rgba(12 131 59);
+  animation: center 3s ease-out forwards;
+}
+
+main > section:nth-child(even) {
+  padding-bottom: 100px;
+  overflow: hidden;
+  padding-top: 20px;
+  clear: both;
+  transition:
+    border 0.3s,
+    padding 0.2s;
+  background-color: rgba(100, 150, 73);
+  border-top: 2px solid rgba(12 131 59);
+  border-bottom: 2px solid rgba(12 131 59);
+  animation: center 3s ease-out forwards;
+}
+
+.left {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  animation: right 2s ease-out forwards;
+}
+
+.right {
+  display: inline-block;
+  float: left;
+  width: 40%;
+  margin: 0;
+  padding-right: 5%;
+  padding-left: 5%;
+  animation: left 2s ease-out forwards;
+}
+
+.section .left::first-letter,
+.section .right::first-letter {
+  float: left;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+  padding-right: 10px;
+  padding-right: 10px;
+}
+
+main p {
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer {
+  background-image: linear-gradient(
+    180deg,
+    rgba(200, 200, 100, 0.9) 60%,
+    transparent
+  );
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  transition: position 5s;
+  animation: bottom 3s ease forwards;
+  text-transform: uppercase;
+}
+
+@keyframes top {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes right {
+  from {
+    transform: translateX(250%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes left {
+  from {
+    transform: translateX(-125%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes center {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bottom {
+  from {
+    transform: translateY(250%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  nav li {
+    padding-top: 20px;
+    font-size: 0.5em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+  }
+
+  .left,
+  .right {
+    float: none;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .left p,
+  .right p {
+    font-size: 1.3em;
+  }
+}
+
+/*Hover et Active effects pour les icones sociales.*/
+.left {
+  position: relative;
+  display: inline-block;
+}
+
+.left a img {
+  display: block;
+  cursor: pointer;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.left:hover a img {
+  transform: scale(1.05);
+  /* Zoom au survol */
+  opacity: 0.8;
+  /* Légère transparence */
+}
+
+.left:active a img {
+  transform: scale(0.95);
+  /* Réduction au clic */
+  opacity: 0.7;
+  /* Plus de transparence au clic */
+}
+
+.left::after {
+  content: "🔍";
+  /* Icône à afficher au survol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  /* Invisible par défaut */
+  transition:
+    opacity 0.3s,
+    color 0.3s;
+}
+
+.left:hover::after {
+  opacity: 1;
+  /* Affichage de l'icône au survol */
+  color: #4caf50;
+  /* Couleur de l'icône au survol */
+}
+
+.left:active::after {
+  color: #ff5733;
+  /* Changement de couleur au clic */
+}
+
+/*Hover et Active effects pour le menu.*/
+
+/* Style de base pour les liens de menu */
+nav a {
+  text-decoration: none; /* Enlever le soulignement par défaut */
+  color: #333; /* Couleur par défaut du texte */
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease; /* Transition pour la couleur */
+}
+
+/* Effet de soulignement animé au survol */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(12 131 59); /* Couleur du soulignement */
+  transition: width 0.3s ease; /* Animation pour l'agrandissement */
+}
+
+/* Au survol : agrandissement du soulignement */
+nav a:hover {
+  color: #4caf50; /* Changement de couleur du texte */
+}
+
+nav a:hover::after {
+  width: 100%; /* Le soulignement s'étend sur toute la largeur */
+}
+
+/* Effet au clic : réduction du lien et changement de couleur */
+nav a:active {
+  transform: scale(0.95); /* Réduit légèrement le lien */
+  color: #ff5733; /* Changement de couleur du texte au clic */
+}
+
+nav a:active::after {
+  background-color: #ff5733; /* Le soulignement prend la couleur du clic */
+}
